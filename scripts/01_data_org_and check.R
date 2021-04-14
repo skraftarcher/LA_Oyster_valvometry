@@ -8,20 +8,33 @@ source("scripts/01a_data_org_and check_functions.R")# this loads the functions
 
 # this first function takes the data as its output by the strainmeter and turns it into a useful format
 # it should be run on each file you download from the strainmeter
-format.data(path="odata/LSU/F005.csv",
+# format.data(path="odata/LSU/F005.csv",
+#             ch1="o4_1",ch2="o1_1",ch3="o2_1",ch4="o6_1",
+#             outfile="odata/LSU_040721.rds")
+
+format.data(path="odata/LSU/F006.csv",
             ch1="o4_1",ch2="o1_1",ch3="o2_1",ch4="o6_1",
-            outfile="odata/LSU_040721.rds")
+            outfile="odata/LSU_041421.rds")
 
-format.data(path="odata/LUMCON/F007.csv",
+# format.data(path="odata/LUMCON/F007.csv",
+#             ch1="o3_1",ch2="o5_1",ch3="o7_1",ch4="o8_1",
+#             outfile="odata/LUMCON_040721.rds")
+
+format.data(path="odata/LUMCON/F008.csv",
             ch1="o3_1",ch2="o5_1",ch3="o7_1",ch4="o8_1",
-            outfile="odata/LUMCON_040721.rds")
+            outfile="odata/LUMCON_041421.rds")
 
-org.data(download_date = "031021",file.type="xlsx")
-org.data(download_date = "031821",file.type="xlsx")
-org.data(download_date = "040721",file.type="rds")# to run this function just put the download date
+# to run this function just put the download date
 # that you want to process within the "" dates are in a mmddyy format so the
 # data downloaded on March 10, 2021 is "031021" 
 # you only need to run the function above once for each download date.
+
+
+# org.data(download_date = "031021",file.type="xlsx")
+# org.data(download_date = "031821",file.type="xlsx")
+# org.data(download_date = "040721",file.type="rds")
+# org.data(download_date = "041421",file.type="rds")
+
 
 ## now link with environmental data if available
 # you only need to run the function below once for each download date.
